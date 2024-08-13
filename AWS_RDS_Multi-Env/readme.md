@@ -95,6 +95,6 @@ cd terraform_project/envs/qa
 * Step 2: Destroy the QA Environment Resources
 Run the terraform destroy command to destroy the resources associated with the QA environment:
 
-``bash
+```bash
 terraform destroy -var-file=terraform.tfvars
-``
+```
