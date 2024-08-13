@@ -1,7 +1,8 @@
-#This Terraform code provisions the AWS RDS in the given environment
+# This Terraform code provisions the AWS RDS in the given environment
 # Feel free to adjust the terraform.tfvars to your requirements
+# -----------------------
 # Structure
-#-------------  
+
 ```markdown
 terraform_project/
 ├── main.tf
@@ -43,42 +44,41 @@ terraform  workspace new prod
 #use workspace
 terraform workspace select qa
 
-#Plan
+# Plan
 
-**QA
+* QA
 
 ```bash
 terrafrom plan --var-file=envs/qa/terraformz.tfvars
 ```
 
-**STAG
+* STAG
 
 ```bash
 terrafrom plan  --var-file=envs/stag/terraformz.tfvars
 ```
 
-**PROD
+* PROD
 
 ```bash
 terrafrom plan --var-file=envs/prod/terraformz.tfvars
 ```
 
-#Deploy
+# Deploy
 
-**QA
+* QA
 ```bash
 terrafrom apply --var-file=envs/qa/terraformz.tfvars
 ```
 
-**Stag
+* Stag
 
 ```bash 
 terrafrom apply --var-file=envs/stag/terraformz.tfvars
 ```
 
-**Prod
+* Prod
 
 ```bash 
 terrafrom apply --var-file=envs/prod/terraformz.tfvars
-```
 ```
