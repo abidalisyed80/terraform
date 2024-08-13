@@ -33,22 +33,27 @@ terraform init
 
 #to maintain state files separately for each env 
 #create workspaces for each env
+```bash
 terraform  workspace new qa
 terraform  workspace new stag
 terraform  workspace new prod
-
+```
 #use workspace
 terraform workspace select qa
 
-#Plan
-#---------
-#QA
+##Plan
+*QA
+```bash
 terrafrom plan --var-file=envs/qa/terraformz.tfvars
-#STAG
+```
+*STAG
+```bash
 terrafrom plan  --var-file=envs/stag/terraformz.tfvars
-#PROD
+```
+*PROD
+```bash
 terrafrom plan --var-file=envs/prod/terraformz.tfvars
-
+```
 
 #Deploy
 #---------
