@@ -1,4 +1,5 @@
 # This Terraform code provisions the AWS RDS in the given environment
+# This code will create VPC, Security Group, and RDS
 # Feel free to adjust the terraform.tfvars to your requirements
 # -----------------------
 # Structure
