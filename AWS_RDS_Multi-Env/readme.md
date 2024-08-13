@@ -46,14 +46,19 @@ terraform workspace select qa
 #Plan
 
 **QA
+
 ```bash
 terrafrom plan --var-file=envs/qa/terraformz.tfvars
 ```
+
 **STAG
+
 ```bash
 terrafrom plan  --var-file=envs/stag/terraformz.tfvars
 ```
+
 **PROD
+
 ```bash
 terrafrom plan --var-file=envs/prod/terraformz.tfvars
 ```
@@ -61,9 +66,19 @@ terrafrom plan --var-file=envs/prod/terraformz.tfvars
 #Deploy
 
 **QA
-```bashterrafrom apply --var-file=envs/qa/terraformz.tfvars```
+```bash
+terrafrom apply --var-file=envs/qa/terraformz.tfvars
+```
+
 **Stag
-```bash terrafrom apply --var-file=envs/stag/terraformz.tfvars```
+
+```bash 
+terrafrom apply --var-file=envs/stag/terraformz.tfvars
+```
+
 **Prod
-```bash terrafrom apply --var-file=envs/prod/terraformz.tfvars ```
+
+```bash 
+terrafrom apply --var-file=envs/prod/terraformz.tfvars
+```
 ```
