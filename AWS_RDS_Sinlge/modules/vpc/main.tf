@@ -9,8 +9,3 @@ resource "aws_subnet" "public" {
   map_public_ip_on_launch = true
   availability_zone = element(var.availability_zones, count.index)
 }
-
-output "vpc_id" {
-  value = aws_vpc.rds.id
-}
-

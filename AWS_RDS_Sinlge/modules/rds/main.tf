@@ -10,8 +10,3 @@ resource "aws_db_instance" "rds" {
   db_subnet_group_name = var.db_subnet_group_name
   skip_final_snapshot  = var.skip_final_snapshot
 }
-
-output "rds_endpoint" {
-  value = aws_db_instance.rds.endpoint
-}
-
