@@ -2,6 +2,7 @@
 # Feel free to adjust the terraform.tfvars to your requirements
 # Structure
 #-------------  
+```markdown
 terraform_project/
 ├── main.tf
 ├── variables.tf
@@ -26,11 +27,12 @@ terraform_project/
     │   ├── terraform.tfvars
     └── prod/
         ├── terraform.tfvars
-
+```
 
 #Initialize project from root
+```bash
 terraform init 
-
+```
 #to maintain state files separately for each env 
 #create workspaces for each env
 ```bash
@@ -41,25 +43,27 @@ terraform  workspace new prod
 #use workspace
 terraform workspace select qa
 
-##Plan
-*QA
+#Plan
+
+**QA
 ```bash
 terrafrom plan --var-file=envs/qa/terraformz.tfvars
 ```
-*STAG
+**STAG
 ```bash
 terrafrom plan  --var-file=envs/stag/terraformz.tfvars
 ```
-*PROD
+**PROD
 ```bash
 terrafrom plan --var-file=envs/prod/terraformz.tfvars
 ```
 
 #Deploy
-#---------
-#QA
-terrafrom apply --var-file=envs/qa/terraformz.tfvars
-#Stag
-terrafrom apply --var-file=envs/stag/terraformz.tfvars
-#Prod
-terrafrom apply --var-file=envs/prod/terraformz.tfvars
+
+**QA
+```bashterrafrom apply --var-file=envs/qa/terraformz.tfvars```
+**Stag
+```bash terrafrom apply --var-file=envs/stag/terraformz.tfvars```
+**Prod
+```bash terrafrom apply --var-file=envs/prod/terraformz.tfvars ```
+```
