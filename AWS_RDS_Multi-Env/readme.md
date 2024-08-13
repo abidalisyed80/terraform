@@ -35,14 +35,16 @@ terraform_project/
 terraform init 
 ```
 # To maintain state files separately for each env 
-#_ create workspaces for each env
+create workspaces for each env
 ```bash
 terraform  workspace new qa
 terraform  workspace new stag
 terraform  workspace new prod
 ```
-#use workspace
+use workspace
+```bash
 terraform workspace select qa
+```
 
 # Plan
 
@@ -82,3 +84,16 @@ terrafrom apply --var-file=envs/stag/terraformz.tfvars
 ```bash 
 terrafrom apply --var-file=envs/prod/terraformz.tfvars
 ```
+# Steps to Destroy Only QA
+* Step 1: Navigate to the QA Environment Directory
+First, change your working directory to the QA environment:
+
+```bash
+cd terraform_project/envs/qa
+```
+* Step 2: Destroy the QA Environment Resources
+Run the terraform destroy command to destroy the resources associated with the QA environment:
+
+``bash
+terraform destroy -var-file=terraform.tfvars
+``
