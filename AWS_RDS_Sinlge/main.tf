@@ -23,12 +23,12 @@ module "security_group" {
 module "rds" {
   source               = "./modules/rds"
   allocated_storage    = 20
-  engine               = "mysql"
-  instance_class       = var.db_instance_class
-  name                 = var.db_name
-  username             = var.db_username
-  password             = var.db_password
-  parameter_group_name = var.db_parameter_group_name
+  db_engine               = "mysql"
+  db_instance_class       = var.db_instance_class
+  db_name                 = var.db_name
+  db_username             = var.db_username
+  db_password             = var.db_password
+  db_parameter_group_name = var.db_parameter_group_name
   security_group_id    = module.security_group.security_group_id
   db_subnet_group_name = var.db_subnet_group_name
 }

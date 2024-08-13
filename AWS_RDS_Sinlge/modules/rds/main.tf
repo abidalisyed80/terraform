@@ -1,8 +1,8 @@
 resource "aws_db_instance" "rds" {
   allocated_storage    = var.allocated_storage
   engine               = var.db_engine
-  instance_class       = var.instance_class
-  name                 = var.db_name
+  instance_class       = var.db_instance_class
+  db_name                 = var.db_name
   username             = var.db_username
   password             = var.db_password
   parameter_group_name = var.db_parameter_group_name
