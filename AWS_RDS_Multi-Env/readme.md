@@ -1,5 +1,5 @@
-#This Terraform code provisions the AWS RDS in given Envoirenmetn
-# Feel free to ajdust the terrafrom.tfvars to your requrements
+#This Terraform code provisions the AWS RDS in the given environment
+# Feel free to adjust the terraform.tfvars to your requirements
 # Structure
 #-------------  
 terraform_project/
@@ -29,9 +29,9 @@ terraform_project/
 
 
 #Initialize project from root
-terrafrom init 
+terraform init 
 
-#to maintain state file separately for each env 
+#to maintain state files separately for each env 
 #create workspaces for each env
 terraform  workspace new qa
 terraform  workspace new stag
