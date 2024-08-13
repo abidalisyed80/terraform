@@ -52,38 +52,38 @@ terraform workspace select qa
 * QA
 
 ```bash
-terrafrom plan --var-file=envs/qa/terraformz.tfvars
+terrafrom plan --var-file=envs/qa/terraform.tfvars
 ```
 
 * STAG
 
 ```bash
-terrafrom plan  --var-file=envs/stag/terraformz.tfvars
+terrafrom plan  --var-file=envs/stag/terraform.tfvars
 ```
 
 * PROD
 
 ```bash
-terrafrom plan --var-file=envs/prod/terraformz.tfvars
+terrafrom plan --var-file=envs/prod/terraform.tfvars
 ```
 
 # Deploy
 
 * QA
 ```bash
-terrafrom apply --var-file=envs/qa/terraformz.tfvars
+terrafrom apply --var-file=envs/qa/terraform.tfvars
 ```
 
 * Stag
 
 ```bash 
-terrafrom apply --var-file=envs/stag/terraformz.tfvars
+terrafrom apply --var-file=envs/stag/terraform.tfvars
 ```
 
 * Prod
 
 ```bash 
-terrafrom apply --var-file=envs/prod/terraformz.tfvars
+terrafrom apply --var-file=envs/prod/terraform.tfvars
 ```
 # Steps to Destroy Only QA
 * Step 1: Navigate to the QA Environment Directory
