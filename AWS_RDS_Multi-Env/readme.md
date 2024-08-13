@@ -30,12 +30,12 @@ terraform_project/
         ├── terraform.tfvars
 ```
 
-#Initialize project from root
+# Initialize project from root
 ```bash
 terraform init 
 ```
-#to maintain state files separately for each env 
-#create workspaces for each env
+# To maintain state files separately for each env 
+#_ create workspaces for each env
 ```bash
 terraform  workspace new qa
 terraform  workspace new stag
